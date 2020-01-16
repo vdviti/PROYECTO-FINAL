@@ -1,0 +1,419 @@
+<!DOCTYPE>
+<html>
+	<head>
+
+		<title>PROYECTO FINAL</title>
+		<meta charset="UTF-8">  
+		
+		
+	<!-- Estilos de titulos --> 
+		
+		<style> 
+		
+			h1{ 
+				font-family: broadway;
+				font-size: 30px;
+				text-decoration: underline;
+				}
+			
+			h2{
+				font-family: broadway;
+				font-size: 30px;
+				text-decoration: underline;
+				}
+				
+			h3{
+				font-family: broadway;
+				font-size: 30px;
+				text-decoration: underline;
+				}
+				
+			h4{
+				font-family: broadway;
+				font-size: 30px;
+				text-decoration: underline;
+				}
+				
+			h5{
+				font-family: broadway;
+				font-size: 30px;
+				text-decoration: underline;
+				}
+				
+			h6{
+				font-family: broadway;
+				font-size: 30px;
+				text-decoration: underline;
+				}
+				
+			h7{
+				font-family: broadway;
+				font-size: 30px;
+				text-decoration: underline;
+				}
+			
+		</style>
+			
+		
+	<!-- Estilo del horario --> 
+
+		<style>
+		
+			
+			.clase1 {
+				background-color: yellow;
+
+			}
+			.clase2 {
+				background-color: lightblue;
+		
+			}
+			.clase3 {
+				background-color: pink;
+		
+			}
+			.clase4 {
+				background-color: lime;
+		
+			}
+			.clase5 {
+				background-color: orange;
+		
+			}
+			.clase6 {
+				background-color: red;
+		
+			}
+			.clase7 {
+				background-color: grey;
+		
+			}
+			.clase8 {
+				background-color: violet;
+		
+			}
+			.clase9 {
+				background-color: gold;
+				text-align: center;
+				text-decoration: underline;
+		
+			}
+			
+		</style>
+			
+			
+	<!-- Estilo del reloj --> 	
+			
+			
+		<style type="text/css">
+					
+			#contenedor_reloj{
+					margin: 1rem;
+					padding: 1rem;
+					border: 0 solid #cccccc;
+					  /* IMPORTANTE */
+					text-align: center;
+				}
+		
+			#contenedor_hora{
+					text-align: center;
+					width: auto;
+					height:auto;
+					background-color:blue;
+					color:yellow;
+					border:solid #00DD00 10px;
+					margin: 0px;
+					padding:50px;
+					text-align:center;
+					font-size:100px;	
+				}
+			
+		</style> 
+		
+		
+	<!-- Codigo del dia de la semana --> 
+		
+		
+		<hr><h4>DIA DE LA SEMANA</h4>
+		
+		<script>
+			function f_hora(){
+			var hoy = new Date();
+			var h = hoy.getHours();
+			var m = hoy.getMinutes();
+			var s = hoy.getSeconds();
+			document.getElementById('contenedor_hora').innerHTML = h+":"+m+":"+s;
+			setInterval ( f_hora , 1000);
+			}
+		
+			var d = new Date();
+			document.write('Fecha: '+d.getDate(),'<br>Dia de la semana: '+d.getDay(),'<br>Mes: '+d.getMonth(),'<br>Año: '+d.getFullYear(),'<br>Hora: '+d.getHours(),'<br>Minutos: '+d.getMinutes(),'<br>Segundos: '+d.getSeconds());
+		
+			var d=new Date();
+			var dia=new Array(7);
+			dia[0]="Domingo";
+			dia[1]="Lunes";
+			dia[2]="Martes";
+			dia[3]="Miercoles";
+			dia[4]="Jueves";
+			dia[5]="Viernes";
+			dia[6]="Sabado";
+			document.write("<br><br>Hoy es: " + dia[d.getDay()]);
+		</script>
+		
+	</head>
+	
+	
+	<!-- Codigo del horario y la media de sus notas --> 
+	
+	
+	<head>  
+	
+		<hr><h3>HORARIO Y MEDIA DE NOTAS</h3>
+		
+	</head>
+			
+	
+	<body>
+		
+
+		<table border= "1">
+			<tr class="clase9">
+				<td>LUNES</td>
+				<td>MARTES</td>
+				<td>MIERCOLES</td>
+				<td>JUEVES</td>
+				<td>VIERNES</td>
+			</tr>
+			<tr>
+				<td class="clase1">TIC</td>
+				<td class="clase2">MATE</td>
+				<td class="clase3">ECO</td>
+				<td class="clase4">GEO</td>
+				<td class="clase3">ECO</td>
+			</tr>
+				<td class="clase5">INGLES</td>
+				<td class="clase6">LENGUA</td>
+				<td class="clase6">LENGUA</td>
+				<td class="clase3">ECO</td>
+				<td class="clase1">TIC</td>
+			 </tr>
+				<td class="clase7">FAG</td>
+				<td class="clase8">HISTORIA</td>
+				<td class="clase2">MATE</td>
+				<td class="clase1">TIC</td>
+				<td class="clase7">FAG</td>
+			 </tr>
+				<td class="clase6">LENGUA</td>
+				<td class="clase5">INGLES</td>
+				<td class="clase8">HISTORIA</td>
+				<td class="clase8">HISTORIA</td>
+				<td class="clase8">HISTORIA</td>
+			</tr>
+				<td class="clase2">MATE</td>
+				<td class="clase4">GEO</td>
+				<td class="clase7">FAG</td>
+				<td class="clase6">LENGUA</td>
+				<td class="clase2">MATE</td>
+			 </tr>
+				<td class="clase4">GEO</td>
+				<td class="clase3">ECO</td>
+				<td class="clase4">GEO</td>
+				<td class="clase7">FAG</td>
+				<td class="clase5">INGLES</td>
+				
+			</tr>
+		<table>
+		
+		<script type="text/javascript">
+		
+			var n1 = 8;
+			var n2 = 10;
+			var n3 = 7;
+			var n4 = 10;
+			var n5 = 6;
+			var n6 = 10;
+			var n7 = 8;
+			var n8 = 7;
+			
+			var media = (n1+n2+n3+n4+n5+n6+n7+n8)/8; 
+				
+				document.write("<br>TIC: ",n1);
+				document.write("<br>MATE:",n2);
+				document.write("<br>ECO: ",n3);
+				document.write("<br>GEO: ",n4);
+				document.write("<br>INGLES: ",n5);
+				document.write("<br>LENGUA: ",n6);
+				document.write("<br>FAG: ",n7);
+				document.write("<br>HISTORIA: ",n8);
+			
+			document.write("<br><br>Su media es: ",media);
+			
+		</script>
+		
+	</body> 
+	
+	
+	<!-- Codigo de la estacion del año --> 
+	
+	
+	<head> 
+	
+		<hr><h1>ESTACION DEL AÑO</h1>
+	
+		<script type="text/javascript">
+			function cambiaFondo(x){
+			 console.log(x.value);
+			 
+			 var body = document.getElementById("body");
+			 body.style.backgroundColor = x.value;
+			 }
+		</script>
+		
+	</head>
+	
+	<body id="body">
+	
+		<select name="fondo" id="fondo" onchange="cambiaFondo(this)">
+			<option value="lightblue">Invierno</option> 
+			<option value="yellow">Primavera</option>
+			<option value="orange">Verano</option> 
+			<option value="brown">Otoño</option> 
+		</select>
+
+	</body> 
+	
+	
+	<!-- Codigo de las horas que quedan de clase--> 
+	
+	
+	<head> 
+	
+		<hr><h2>HORAS DE CLASE RESTANTES</h2>
+	
+		<script>
+		
+			var hora = new Date();
+			var w = hora.getHours(); 
+			var f = hora.getMinutes(); 
+			var restah = (14 - w);
+			var restam = (20 - f); 
+			function diferencia(){
+				document.getElementById("diferencia").innerHTML = restah+":"+restam;
+			}
+		</script>
+		
+	</head>  
+	
+	<body>
+		
+		<div>
+			<button id="diferencia" onclick = "diferencia()">Horas que quedan de clase</button>
+		</div>
+		
+	</body>
+
+
+	<!-- Codigo del reloj --> 
+	
+	
+	<head> 
+	
+		<hr><h5>RELOJ</h5>
+		
+	</head>
+	
+	
+	<body onload=f_hora()>
+			
+		
+		<div id="contenedor_reloj">	
+			<button id="contenedor_hora" onclick="f_hora()">actualizar la hora</button>
+		</div> 
+	
+	</body>
+
+
+	<!-- Codigo del tiempo que hace en laguna --> 
+	
+
+	<head>
+		
+		<hr><h6>TIEMPO EN LAGUNA</h6> 
+		
+	</head>
+		
+	
+	<body>
+		
+		
+		<!-- weather widget start -->
+			<a target="_blank" href="https://hotelmix.es/weather/laguna-de-duero-147364">
+				<img src="https://w.bookcdn.com/weather/picture/3_147364_1_4_137AE9_250_ffffff_333333_08488D_1_ffffff_333333_0_6.png?scode=124&domid=582&anc_id=10845"  alt="booked.net"/>
+			</a>
+		<!-- weather widget end -->
+
+	</body> 
+	
+	
+	<!-- Codigo de processing --> 
+	
+	
+	<head> 
+	
+		<hr><h7>PROCESSING</h7>
+		
+		<script src="https://cdn.jsdelivr.net/npm/p5@0.10.2/lib/p5.js">
+		
+			</script>
+		
+		<script src="sketch.js">
+		
+			</script>
+		
+	</head>
+	
+	<body>
+	
+		<script>
+			function setup() {
+			  createCanvas(710, 400, WEBGL);
+			}
+
+			function draw() {
+				background(250);
+			let radius = width * 1.5;
+			
+				orbitControl();
+
+				normalMaterial();
+				translate(0, 0, -600);
+				
+			for (let i = 0; i <= 12; i++) {
+			
+			for (let j = 0; j <= 12; j++) {
+				  push();
+				  
+			let a = (j / 12) * PI;
+			let b = (i / 12) * PI;
+				translate(
+				sin(2 * a) * radius * sin(b),
+				(cos(b) * radius) / 2,
+				cos(2 * a) * radius * sin(b)
+			  );
+			  
+			if (j % 2 === 0) {
+				cone(30, 30);
+				} else {
+				box(30, 30, 30);
+				}
+				pop();
+				}
+			}
+		}
+
+		</script>
+		
+	</body>
+		
+<html>
